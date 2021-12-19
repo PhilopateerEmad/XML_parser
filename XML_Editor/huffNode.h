@@ -14,8 +14,8 @@ private:
 public:
     HuffNode();
     void setId(char id);
-    void setFrequency(int frequency); // 8aleban ha5li dol static goa el cpp
-    void setCode(string code);        // 8aleban ha5li dol static goa el cpp
+    void setFrequency(int frequency); 
+    void setCode(string code);        
     void setLeft(HuffNode *left);
     void setRight(HuffNode *right);
     HuffNode *getLeft();

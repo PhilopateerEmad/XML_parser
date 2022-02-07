@@ -10,7 +10,8 @@
 #include <vector>
 #include <string>
 #include <fstream>
-
+#include <xmltomat.h>
+#include <network_analysis.h>
 #include "general_functions.h"
 #include <consistency.h>
 #include "formatting_minifying.h"
@@ -67,6 +68,8 @@ private slots:
     void on_actionSave_2_triggered();
 
     void on_ShowErrors_clicked();
+
+    void on_pushButton_2_clicked();
 
 private:
     Ui::MainWindow *ui;

@@ -1,6 +1,7 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
-
+#include <QDesktopServices>
+#include <QImage>
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
     , ui(new Ui::MainWindow)
@@ -118,6 +119,7 @@ void MainWindow::on_ErrorCheck_clicked()
         return;
     }
   on_actionSave_2_triggered();
+  ui->label->clear();
 
     vector<string>x;
     string inq = in.toLocal8Bit().constData();
@@ -145,6 +147,8 @@ void MainWindow::on_ErrorFix_clicked()
                return;
            }
   on_actionSave_2_triggered();
+  ui->label->clear();
+
            vector<string> input;
           readFile("input.xml",input);
 
@@ -181,6 +185,7 @@ void MainWindow::on_XMLtoJson_clicked()
                return;
            }
   on_actionSave_2_triggered();
+  ui->label->clear();
 
 
            string inq = in.toLocal8Bit().constData();
@@ -228,6 +233,8 @@ void MainWindow::on_Prettify_clicked()
         return;
     }
   on_actionSave_2_triggered();
+  ui->label->clear();
+
     vector<string> xml;
     readFile("input.xml", xml);
     prettifying_func(xml,"pretify.txt");
@@ -257,6 +264,7 @@ void MainWindow::on_Minify_clicked()
         return;
     }
   on_actionSave_2_triggered();
+  ui->label->clear();
 
 
     string inq = in.toLocal8Bit().constData();
@@ -290,6 +298,8 @@ void MainWindow::on_Compress_clicked()
     }
 
   on_actionSave_2_triggered();
+  ui->label->clear();
+
     CompressionCoding c1("input.xml", "compressed.xml");
 
 int original_file_size = 0;
@@ -398,5 +408,32 @@ void MainWindow::on_ShowErrors_clicked()
                 ui->textEdit_2->setPlainText(text);
                 x.close();
             }
+}
+
+
+void MainWindow::on_pushButton_2_clicked()
+{
+    int users_count=0;
+    int arr[100][100]={0};
+    ui->textEdit_2->clear();
+    QString in = ui->textEdit->toPlainText();
+
+    if(in == ""){
+        QMessageBox::warning(this, "Warning", "No Text To Be Converted");
+        return;
+    }
+on_actionSave_2_triggered();
+xmltomat("input.xml",&users_count,arr);
+
+GraphAnalysis g1(arr, users_count, "output.jpg");
+
+QImage image;
+bool valid=image.load("output.jpg");
+
+if(valid){
+    //image=image.scaledToWidth(ui->label->width(),Qt::SmoothTransformation);
+    ui->label->setPixmap(QPixmap::fromImage(image.scaled(800,1800,Qt::KeepAspectRatio,Qt::SmoothTransformation)));
+}else{
+}
 }
 

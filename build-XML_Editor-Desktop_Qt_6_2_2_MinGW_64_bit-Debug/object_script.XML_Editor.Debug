@@ -8,6 +8,8 @@ debug/huffTree.o
 debug/json.o
 debug/main.o
 debug/mainwindow.o
+debug/network_analysis.o
+debug/xmltomat.o
 debug/qrc_Images.o
 debug/qrc_Resources.o
 debug/moc_mainwindow.o

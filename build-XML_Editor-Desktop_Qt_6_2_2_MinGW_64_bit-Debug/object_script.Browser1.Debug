@@ -1,0 +1,13 @@
+debug/compressionCoding.o
+debug/compressionDecoding.o
+debug/consistency.o
+debug/formatting_minifying.o
+debug/general_functions.o
+debug/huffNode.o
+debug/huffTree.o
+debug/json.o
+debug/main.o
+debug/mainwindow.o
+debug/qrc_Images.o
+debug/qrc_Resources.o
+debug/moc_mainwindow.o

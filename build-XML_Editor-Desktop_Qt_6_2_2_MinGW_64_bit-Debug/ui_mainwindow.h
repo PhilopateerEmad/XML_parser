@@ -15,6 +15,7 @@
 #include <QtWidgets/QApplication>
 #include <QtWidgets/QCheckBox>
 #include <QtWidgets/QHBoxLayout>
+#include <QtWidgets/QLabel>
 #include <QtWidgets/QMainWindow>
 #include <QtWidgets/QMenu>
 #include <QtWidgets/QMenuBar>
@@ -52,12 +53,14 @@ public:
     QPushButton *Minify;
     QPushButton *Compress;
     QPushButton *Decompress;
+    QPushButton *pushButton_2;
     QWidget *verticalLayoutWidget;
     QVBoxLayout *verticalLayout;
     QTextEdit *textEdit;
     QWidget *verticalLayoutWidget_2;
     QVBoxLayout *verticalLayout_2;
     QTextEdit *textEdit_2;
+    QLabel *label;
     QMenuBar *menubar;
     QMenu *menuFile;
     QMenu *menuEdit;
@@ -68,7 +71,7 @@ public:
     {
         if (MainWindow->objectName().isEmpty())
             MainWindow->setObjectName(QString::fromUtf8("MainWindow"));
-        MainWindow->resize(1253, 781);
+        MainWindow->resize(1445, 781);
         actionNew = new QAction(MainWindow);
         actionNew->setObjectName(QString::fromUtf8("actionNew"));
         QIcon icon;
@@ -125,7 +128,7 @@ public:
         centralwidget->setObjectName(QString::fromUtf8("centralwidget"));
         horizontalLayoutWidget = new QWidget(centralwidget);
         horizontalLayoutWidget->setObjectName(QString::fromUtf8("horizontalLayoutWidget"));
-        horizontalLayoutWidget->setGeometry(QRect(160, 10, 941, 41));
+        horizontalLayoutWidget->setGeometry(QRect(50, 10, 1346, 42));
         horizontalLayout = new QHBoxLayout(horizontalLayoutWidget);
         horizontalLayout->setObjectName(QString::fromUtf8("horizontalLayout"));
         horizontalLayout->setContentsMargins(0, 0, 0, 0);
@@ -197,9 +200,14 @@ public:
 
         horizontalLayout->addWidget(Decompress);
 
+        pushButton_2 = new QPushButton(horizontalLayoutWidget);
+        pushButton_2->setObjectName(QString::fromUtf8("pushButton_2"));
+
+        horizontalLayout->addWidget(pushButton_2);
+
         verticalLayoutWidget = new QWidget(centralwidget);
         verticalLayoutWidget->setObjectName(QString::fromUtf8("verticalLayoutWidget"));
-        verticalLayoutWidget->setGeometry(QRect(20, 60, 581, 611));
+        verticalLayoutWidget->setGeometry(QRect(50, 60, 641, 611));
         verticalLayout = new QVBoxLayout(verticalLayoutWidget);
         verticalLayout->setObjectName(QString::fromUtf8("verticalLayout"));
         verticalLayout->setContentsMargins(0, 0, 0, 0);
@@ -211,20 +219,21 @@ public:
 
         verticalLayoutWidget_2 = new QWidget(centralwidget);
         verticalLayoutWidget_2->setObjectName(QString::fromUtf8("verticalLayoutWidget_2"));
-        verticalLayoutWidget_2->setGeometry(QRect(620, 60, 601, 611));
+        verticalLayoutWidget_2->setGeometry(QRect(800, 60, 421, 611));
         verticalLayout_2 = new QVBoxLayout(verticalLayoutWidget_2);
         verticalLayout_2->setObjectName(QString::fromUtf8("verticalLayout_2"));
         verticalLayout_2->setContentsMargins(0, 0, 0, 0);
-        textEdit_2 = new QTextEdit(verticalLayoutWidget_2);
+        textEdit_2 = new QTextEdit(centralwidget);
         textEdit_2->setObjectName(QString::fromUtf8("textEdit_2"));
+        textEdit_2->setGeometry(QRect(738, 60, 661, 609));
         textEdit_2->setReadOnly(true);
-
-        verticalLayout_2->addWidget(textEdit_2);
-
+        label = new QLabel(centralwidget);
+        label->setObjectName(QString::fromUtf8("label"));
+        label->setGeometry(QRect(740, 70, 651, 591));
         MainWindow->setCentralWidget(centralwidget);
         menubar = new QMenuBar(MainWindow);
         menubar->setObjectName(QString::fromUtf8("menubar"));
-        menubar->setGeometry(QRect(0, 0, 1253, 25));
+        menubar->setGeometry(QRect(0, 0, 1445, 25));
         menuFile = new QMenu(menubar);
         menuFile->setObjectName(QString::fromUtf8("menuFile"));
         menuEdit = new QMenu(menubar);
@@ -288,6 +297,8 @@ public:
         Minify->setText(QCoreApplication::translate("MainWindow", "Minify", nullptr));
         Compress->setText(QCoreApplication::translate("MainWindow", "Compress", nullptr));
         Decompress->setText(QCoreApplication::translate("MainWindow", "Decompress", nullptr));
+        pushButton_2->setText(QCoreApplication::translate("MainWindow", "Draw Graph", nullptr));
+        label->setText(QString());
         menuFile->setTitle(QCoreApplication::translate("MainWindow", "File", nullptr));
         menuEdit->setTitle(QCoreApplication::translate("MainWindow", "Edit", nullptr));
         toolBar->setWindowTitle(QCoreApplication::translate("MainWindow", "toolBar", nullptr));

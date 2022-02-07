@@ -1,0 +1,13 @@
+release/compressionCoding.o
+release/compressionDecoding.o
+release/consistency.o
+release/formatting_minifying.o
+release/general_functions.o
+release/huffNode.o
+release/huffTree.o
+release/json.o
+release/main.o
+release/mainwindow.o
+release/qrc_Images.o
+release/qrc_Resources.o
+release/moc_mainwindow.o

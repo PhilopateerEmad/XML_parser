@@ -173,6 +173,8 @@ Makefile: ../XML_Editor/XML_Editor.pro C:/Qt/6.2.2/mingw_64/mkspecs/win32-g++/qm
 		C:/Qt/6.2.2/mingw_64/mkspecs/modules/qt_lib_uiplugin.pri \
 		C:/Qt/6.2.2/mingw_64/mkspecs/modules/qt_lib_uitools.pri \
 		C:/Qt/6.2.2/mingw_64/mkspecs/modules/qt_lib_uitools_private.pri \
+		C:/Qt/6.2.2/mingw_64/mkspecs/modules/qt_lib_webkit.pri \
+		C:/Qt/6.2.2/mingw_64/mkspecs/modules/qt_lib_webkitwidgets.pri \
 		C:/Qt/6.2.2/mingw_64/mkspecs/modules/qt_lib_widgets.pri \
 		C:/Qt/6.2.2/mingw_64/mkspecs/modules/qt_lib_widgets_private.pri \
 		C:/Qt/6.2.2/mingw_64/mkspecs/modules/qt_lib_xml.pri \
@@ -210,6 +212,7 @@ Makefile: ../XML_Editor/XML_Editor.pro C:/Qt/6.2.2/mingw_64/mkspecs/win32-g++/qm
 		../XML_Editor/XML_Editor.pro \
 		C:/Qt/6.2.2/mingw_64/lib/Qt6Widgets.prl \
 		C:/Qt/6.2.2/mingw_64/lib/Qt6Gui.prl \
+		C:/Qt/6.2.2/mingw_64/lib/Qt6Network.prl \
 		C:/Qt/6.2.2/mingw_64/lib/Qt6Core.prl \
 		C:/Qt/6.2.2/mingw_64/lib/Qt6EntryPoint.prl \
 		C:/Qt/6.2.2/mingw_64/mkspecs/features/build_pass.prf \
@@ -319,6 +322,8 @@ C:/Qt/6.2.2/mingw_64/mkspecs/modules/qt_lib_tools_private.pri:
 C:/Qt/6.2.2/mingw_64/mkspecs/modules/qt_lib_uiplugin.pri:
 C:/Qt/6.2.2/mingw_64/mkspecs/modules/qt_lib_uitools.pri:
 C:/Qt/6.2.2/mingw_64/mkspecs/modules/qt_lib_uitools_private.pri:
+C:/Qt/6.2.2/mingw_64/mkspecs/modules/qt_lib_webkit.pri:
+C:/Qt/6.2.2/mingw_64/mkspecs/modules/qt_lib_webkitwidgets.pri:
 C:/Qt/6.2.2/mingw_64/mkspecs/modules/qt_lib_widgets.pri:
 C:/Qt/6.2.2/mingw_64/mkspecs/modules/qt_lib_widgets_private.pri:
 C:/Qt/6.2.2/mingw_64/mkspecs/modules/qt_lib_xml.pri:
@@ -356,6 +361,7 @@ C:/Qt/6.2.2/mingw_64/mkspecs/features/lex.prf:
 ../XML_Editor/XML_Editor.pro:
 C:/Qt/6.2.2/mingw_64/lib/Qt6Widgets.prl:
 C:/Qt/6.2.2/mingw_64/lib/Qt6Gui.prl:
+C:/Qt/6.2.2/mingw_64/lib/Qt6Network.prl:
 C:/Qt/6.2.2/mingw_64/lib/Qt6Core.prl:
 C:/Qt/6.2.2/mingw_64/lib/Qt6EntryPoint.prl:
 C:/Qt/6.2.2/mingw_64/mkspecs/features/build_pass.prf:

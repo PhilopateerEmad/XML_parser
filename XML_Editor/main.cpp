@@ -12,10 +12,6 @@ using namespace std;
 
 int main(int argc, char *argv[])
 {
-//    string output_file_name = "D:/phillll.jpg";
-//    int number_of_nodes = 10;
-//    int mat[100][100] = {{0, 1, 0, 1, 0, 1}, {1, 1, 1, 1, 1, 1}, {1, 1, 0, 1, 1, 1}, {1, 1, 0, 0, 1, 1}, {0, 1, 0, 1, 1, 1}, {1, 1, 1, 1, 1, 1}};
-//    GraphAnalysis g1(mat, number_of_nodes, output_file_name);
 
     QApplication a(argc, argv);
     QFile stylesheetFile("./SyNet.qss");
